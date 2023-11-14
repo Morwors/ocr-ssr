@@ -11,7 +11,7 @@ export const actions = {
         //index.js file
         const processedImage = await Tesseract.recognize(
             buffer,
-            'eng',
+            'eng+srp',
             {logger: m => console.log(m)}
         );
         return {imageText: processedImage.data.text}
